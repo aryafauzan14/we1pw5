@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web1pw5 - Arya Fauzan Permana Putra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1: #a8c0ff;
+      --bg2: #3f2b96;
+      --card: rgba(255, 255, 255, 0.2);
+      --accent: #3b82f6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --panel-bg: rgba(255, 255, 255, 0.15);
+      --panel-text: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 200% 200%;
+      animation: gradientShift 12s ease infinite;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .paper {
+      width: min(950px, 95%);
+      backdrop-filter: blur(12px);
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      animation: slideUp 1s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 10px rgba(59,130,246,0.5);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0;
+      color: var(--accent);
+    }
+
+    .sub {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .main {
+      padding: 36px;
+      color: #fff;
+    }
+
+    .decor {
+      height: 3px;
+      width: 100px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 18px 0;
+    }
+
+    p {
+      line-height: 1.7;
+      text-align: justify;
+      color: #f1f5f9;
+      margin-bottom: 16px;
+    }
+
+    /* PANEL KANAN */
+    .control {
+      background: var(--panel-bg);
+      backdrop-filter: blur(16px);
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .clock, .greeting {
+      background: rgba(255,255,255,0.1);
+      color: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 14px;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .controls-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(59,130,246,0.5);
+    }
+
+    .ghost {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .ghost:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .note {
+      text-align: center;
+      font-size: 12px;
+      color: #e5e7eb;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 800px) {
+      .paper { grid-template-columns: 1fr; }
+      .control { border-left: none; border-top: 1px solid rgba(255,255,255,0.2); }
+      header img { width: 50px; height: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="paper" id="page">
+  <main class="main">
+    <header>
+    <img src="images/arya PNG.jpg" alt="Foto Profil Arya" class="profile-pic">
+      <div>
+        <h1>Web1pw5 - Arya Fauzan Permana Putra</h1>
+        <p class="sub">Latihan ke-5 | Pemrograman Web 1</p>
+      </div>
+    </header>
+
+    <div class="decor"></div>
+
+    <p>Halo! Saya <strong>Arya Fauzan Permana Putra</strong>. Ini adalah hasil latihan dari mata kuliah <em>Pemrograman Web 1</em>. Tujuannya biar lebih paham tentang gimana caranya nggabungin HTML, CSS, dan JavaScript jadi satu halaman web yang interaktif dan responsif.</p>
+
+    <p>Desainnya saya buat pakai gaya <strong>glassmorphism</strong> — biar keliatan modern, elegan, dan enak dipandang. Warna biru keunguan saya pilih karena adem di mata dan cocok buat nuansa belajar santai tapi tetap profesional.</p>
+
+    <p>Dari tugas ini, saya belajar kalau HTML itu fondasi, CSS bikin tampilannya menarik, dan JavaScript bikin web jadi “hidup”. Gabungan ketiganya bikin coding berasa kayak seni digital 🎨💻</p>
+  </main>
+
+  <aside class="control">
+    <div>
+      <div class="greeting" id="greeting">Selamat datang!</div>
+      <div class="clock" id="clock">Klik tombol di bawah buat liat waktu ⏰</div>
+    </div>
+
+    <div>
+      <div class="controls-row">
+        <button class="btn" id="actionBtn">Tampilkan Waktu</button>
+        <button class="ghost" id="themeBtn">Ganti Tema</button>
+      </div>
+      <div class="note">Pemrograman Web 1 — Arya Fauzan Permana Putra</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+  const clock = document.getElementById("clock");
+  const greeting = document.getElementById("greeting");
+  const btn = document.getElementById("actionBtn");
+  const themeBtn = document.getElementById("themeBtn");
+
+  const themes = [
+    { bg1: "#a8c0ff", bg2: "#3f2b96", accent: "#3b82f6", card: "rgba(255,255,255,0.2)" },
+    { bg1: "#ff9a9e", bg2: "#fad0c4", accent: "#e11d48", card: "rgba(255,255,255,0.25)" },
+    { bg1: "#43cea2", bg2: "#185a9d", accent: "#059669", card: "rgba(255,255,255,0.2)" },
+    { bg1: "#ffecd2", bg2: "#fcb69f", accent: "#fb923c", card: "rgba(255,255,255,0.2)" }
+  ];
+
+  let index = 0;
+
+  function tampilkanSapaan() {
+    const jam = new Date().getHours();
+    let sapa = "";
+    if (jam < 12) sapa = "Selamat pagi, Arya! Semangat coding 💻";
+    else if (jam < 18) sapa = "Selamat sore, Arya! Waktunya ngoding santai ☕";
+    else sapa = "Selamat malam, Arya! Jangan lupa istirahat 🌙";
+    greeting.textContent = sapa;
+  }
+
+  tampilkanSapaan();
+
+  btn.addEventListener("click", () => {
+    const d = new Date();
+    const waktu = d.toLocaleString("id-ID");
+    clock.textContent = "Sekarang jam: " + waktu;
+    btn.style.boxShadow = "0 0 20px rgba(255,255,255,0.4)";
+    setTimeout(() => btn.style.boxShadow = "none", 400);
+  });
+
+  themeBtn.addEventListener("click", () => {
+    index = (index + 1) % themes.length;
+    const t = themes[index];
+    for (let k in t) document.documentElement.style.setProperty(`--${k}`, t[k]);
+    document.body.style.opacity = "0.85";
+    setTimeout(() => (document.body.style.opacity = "1"), 300);
+  });
+</script>
+
+</body>
+</html>
