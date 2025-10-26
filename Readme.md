@@ -1,6 +1,6 @@
 # 🌐 Web1pw5 – Arya Fauzan Permana Putra
 
-![Foto Arya](images/hasil.PNG)
+![Foto Arya](images/hasil.jpg)
 
 ## 🧑‍💻 Identitas
 - **Nama:** Arya Fauzan Permana Putra  
@@ -48,3 +48,4 @@ Kalau digabungin, hasilnya bisa bikin web yang bukan cuma berfungsi, tapi juga e
 ---
 
 © 2025 | Arya Fauzan Permana Putra — Pemrograman Web 1
+
